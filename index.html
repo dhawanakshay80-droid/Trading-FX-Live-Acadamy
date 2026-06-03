@@ -1,49 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trading FX Live Academy</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0b1520;
-        color: #f5f7fa;
-        display: flex;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
-      }
-      .container {
-        text-align: center;
-        max-width: 720px;
-        padding: 2rem;
-      }
-      h1 {
-        margin-bottom: 0.5rem;
-        font-size: clamp(2rem, 4vw, 3.5rem);
-      }
-      p {
-        line-height: 1.75;
-        color: #d8e1ef;
-      }
-      .note {
-        margin-top: 1.5rem;
-        padding: 1rem;
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 14px;
-        background: rgba(255,255,255,0.04);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Trading FX Live Academy</h1>
-      <p>Welcome to the Trading FX Live Academy project. This page is a starter placeholder for your web content.</p>
-      <div class="note">
-        <strong>Next steps:</strong> add your trading dashboard, course materials, or interactive UI here.
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading FX Live</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+background:linear-gradient(90deg,#FFD700,#00ff88);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+background:
+radial-gradient(circle at top,#0c3b2e 0%,#050505 60%);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 20px;
+border:1px solid rgba(255,255,255,.15);
+border-radius:50px;
+background:rgba(255,255,255,.05);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:72px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#FFD700,#00ff88);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:20px;
+color:#bdbdbd;
+line-height:1.8;
+max-width:800px;
+margin:auto;
+}
+
+.btns{
+margin-top:40px;
+}
+
+.btn{
+padding:16px 35px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+display:inline-block;
+margin:10px;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(90deg,#FFD700,#00ff88);
+color:#000;
+}
+
+.secondary{
+border:1px solid #444;
+color:#fff;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:60px;
+flex-wrap:wrap;
+}
+
+.stat{
+background:#111;
+padding:25px;
+border-radius:15px;
+min-width:200px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.stat h3{
+font-size:34px;
+color:#00ff88;
+}
+
+.stat p{
+font-size:14px;
+margin-top:10px;
+}
+
+section{
+padding:100px 8%;
+}
+
+.title{
+text-align:center;
+font-size:48px;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.card h3{
+color:#FFD700;
+margin-bottom:15px;
+}
+
+footer{
+background:#000;
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">TRADING FX LIVE</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Courses</a>
+<a href="#">Seminars</a>
+<a href="#">Updates</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="badge">
+🔥 Professional Forex Education Platform
+</div>
+
+<h1>
+Master The
+<span class="gradient">Currency Market</span>
+Like A Professional
+</h1>
+
+<p>
+Learn Forex Trading, Price Action, Risk Management and Live Market Analysis through structured courses and expert mentorship.
+</p>
+
+<div class="btns">
+<a href="#" class="btn primary">Join Free Webinar</a>
+<a href="#" class="btn secondary">Explore Courses</a>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>1000+</h3>
+<p>Students Trained</p>
+</div>
+
+<div class="stat">
+<h3>Daily</h3>
+<p>Market Analysis</p>
+</div>
+
+<div class="stat">
+<h3>Live</h3>
+<p>Trading Sessions</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Premium Courses</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Forex Basics</h3>
+<p>Learn currency market from beginner level.</p>
+</div>
+
+<div class="card">
+<h3>Price Action Mastery</h3>
+<p>Professional chart reading and trade execution.</p>
+</div>
+
+<div class="card">
+<h3>Risk Management</h3>
+<p>Protect your capital and trade consistently.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Trading FX Live Academy
+
+</footer>
+
+</body>
 </html>
